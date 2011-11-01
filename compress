@@ -1,0 +1,2 @@
+#!/bin/bash
+closure --js underscore.object.js > underscore.object.min.js 
