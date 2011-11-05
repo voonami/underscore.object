@@ -1,3 +1,6 @@
+// Underscore.Object
+// Copyright (c) 2011 Voonami
+// Freely distributable under the terms of the MIT license.
 // The inherits function is taken almost verbatim from backbone.js 0.5.3.
 
 (function(_, exports) {
@@ -21,9 +24,9 @@
         child.prototype = new ctor();
         // Add prototype properties (instance properties) to the subclass,
         // if supplied.
-        if (protoProps) _.extend(child.prototype, protoProps);
+        if (protoProps) { _.extend(child.prototype, protoProps); }
         // Add static properties to the constructor function, if supplied.
-        if (staticProps) _.extend(child, staticProps);
+        if (staticProps) { _.extend(child, staticProps); }
         // Correctly set child's `prototype.constructor`.
         child.prototype.constructor = child;
         // Set a convenience property in case the parent's prototype is needed later.
@@ -33,14 +36,21 @@
 
     var Object = function(properties, options) {
         if (properties) { _.extend(this, properties); }
+        this.superInit = function(options) {
+            if (this.__parentInit__ !== undefined) {
+                _.bind(this.__parentInit__, this);
+                this.__parentInit__(options);
+            }
+        };
         this.initialize(options || {});
     };
 
     Object.extend = function(protoProps, classProps) {
         var child = inherits(this, protoProps, classProps);
+        child.prototype.__parentInit__ = this.prototype.initialize;
         child.extend = this.extend;
         return child;
-    }
+    };
 
     _.extend(Object.prototype, {
         initialize: function(options) { }
