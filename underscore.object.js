@@ -1,4 +1,4 @@
-// Underscore.Object
+// Underscore.Object v0.1.1
 // Copyright (c) 2011 Voonami
 // Freely distributable under the terms of the MIT license.
 // The inherits function is taken almost verbatim from backbone.js 0.5.3.
