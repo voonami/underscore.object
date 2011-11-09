@@ -1,6 +1,6 @@
 {
     "name" : "underscore.object",
-    "version" : "0.1.2",
+    "version" : "0.1.3",
     "author" : "Voonami Inc.",
     "contributors" : [
         "Jason Webb <bigjasonwebb@gmail.com> (http://www.bigjason.com/)"
@@ -14,6 +14,6 @@
     "engines": {
         "node": "*"
     },
-    "main" : "lib/underscore.object",
+    "main" : "underscore.object",
     "dependencies" : { }
 }
