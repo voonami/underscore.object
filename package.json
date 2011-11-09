@@ -1,0 +1,19 @@
+{
+    "name" : "underscore.object",
+    "version" : "0.0.1",
+    "author" : "Voonami Inc.",
+    "contributors" : [
+        "Jason Webb <bigjasonwebb@gmail.com> (http://www.bigjason.com/)"
+    ],
+    "description" : "A simple javascript object system in the spirit of backbone.js models.",
+    "homepage" : "https://github.com/Thinkatomic/underscore.object",
+    "repository" : "https://github.com/Thinkatomic/underscore.object",
+    "directories": {
+        "lib": "./lib"
+    },
+    "engines": {
+        "node": "*"
+    },
+    "main" : "lib/underscore.object",
+    "dependencies" : { }
+}
